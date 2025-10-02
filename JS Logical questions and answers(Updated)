@@ -1,0 +1,116 @@
+// 1. find max number in an array
+// 2. find min number in an array
+// 3. find second max number in an array
+// 4. find second min number in an array
+// 5. reverse a string
+// 6. find palindrome
+// 7. factorial of a number
+// 8. prime number
+// 9. fibonacci series
+// 10. compare two arrays
+// 11. compare dates
+// 12. sort an array 
+// 13. pattern
+// 14. total a number of an array
+// 15. find a missing numbers in an array
+
+
+
+
+
+// 1. find max number in an array
+// const arr = [10,2,3,4,5,6,9]
+
+// one way: using Math
+// const max = Math.max(...arr)
+// console.log(max)
+
+// second way: using sort
+// const sortDec = arr.sort((a,b) => b - a)
+// console.log(sortDec[0])
+
+// third way: using loop
+// const sortIt = (items) => {
+//     for (i = 0; i < items.length-1; i++){
+//         for(j = i+1; j<items.length; j++){
+//             if(items[i] > items[j]){
+//                 let temp = items[i]
+//                 items[i] = items[j]
+//                 items[j] = temp
+//             }
+//         }
+//     }
+//     return items[items.length-1]
+// }
+// console.log(sortIt(arr))
+
+
+
+// 2. find min number in an array
+const arr = [2,3,1,5,7,6,4,9,13]
+
+//first way: using Math
+// const largest = Math.max(...arr)
+// const removeLargest = arr.filter((item) => item !== largest)
+// const secondLarg = Math.max(...removeLargest)
+// console.log(secondLarg)
+
+//second way: using sort
+// const sortDec = arr.sort((a,b) => b-a)
+// console.log(sortDec[1])
+
+//third way: using loop
+// function secondLarg(items) {
+//     for(let i=0; i<items.length; i++){
+//         for(let j=i+1; j<items.length; j++){
+//             if(items[i] > items[j]){
+//               let temp = items[i]
+//               items[i] = items[j]
+//               items[j] = temp
+//             }
+//         }
+//     }
+//     return items[items.length-2]
+// }
+// console.log(secondLarg(arr))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
