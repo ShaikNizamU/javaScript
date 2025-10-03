@@ -89,6 +89,180 @@ const arr = [2,3,1,5,7,6,4,9,13]
 
 
 
+// 1. find max number in an array
+// 2. find second max number in an array
+// 3. find min number in an array
+// 4. find second min number in an array
+// 5. reverse a string
+// 6. find palindrome
+// 7. factorial of a number
+// 8. prime number
+// 9. fibonacci series
+// 10. compare two arrays
+// 11. compare dates
+// 12. sort an array 
+// 13. pattern
+// 14. total a number of an array
+// 15. find a missing numbers in an array
+
+
+
+
+
+// 1. find max number in an array
+// const arr = [10,2,3,4,5,6,9]
+
+// one way: using Math
+// const max = Math.max(...arr)
+// console.log(max)
+
+// second way: using sort
+// const sortDec = arr.sort((a,b) => b - a)
+// console.log(sortDec[0])
+
+// third way: using loop
+// const sortIt = (items) => {
+//     for (i = 0; i < items.length-1; i++){
+//         for(j = i+1; j<items.length; j++){
+//             if(items[i] > items[j]){
+//                 let temp = items[i]
+//                 items[i] = items[j]
+//                 items[j] = temp
+//             }
+//         }
+//     }
+//     return items[items.length-1]
+// }
+// console.log(sortIt(arr))
+
+
+
+// 2. find min number in an array
+// const arr = [2,3,1,5,7,6,4,9,13]
+
+//first way: using Math
+// const largest = Math.max(...arr)
+// const removeLargest = arr.filter((item) => item !== largest)
+// const secondLarg = Math.max(...removeLargest)
+// console.log(secondLarg)
+
+//second way: using sort
+// const sortDec = arr.sort((a,b) => b-a)
+// console.log(sortDec[1])
+
+//third way: using loop
+// const secondLarge = (items) => {
+//     for(i=0; i<items.length -1; i++){
+//         for(j=i+1; i<items.length; j++){
+//             if(items[i] > items[j]){
+//                 let temp = items[i]
+//                 items[i] = items[j]
+//                 items[j] = temp
+//             }
+//         }
+//     }
+//     return items[items.length-2]
+// }
+// console.log(secondLarge(arr))
+
+
+
+
+// 3. find min number in an array
+// const arr = [22,33,12,5,6,8,9,3]
+
+//first way; using Math
+// console.log(Math.min(...arr))
+
+//second way: using sort
+// const sortedArr = arr.sort((a,b) => a-b)
+// console.log(sortedArr[0])
+
+//third way: using loop
+// function findMin(items) {
+//     for(i=0; i<items.length-1; i++){
+//         for(j=i+1; j<items.length; j++){
+//             if(items[i] > items[j]){
+//                 let temp =items[i]
+//                 items[i] = items[j]
+//                 items[j] = temp
+//             }
+//         }
+//     }
+//     return items[0]
+// }
+// console.log(findMin(arr))
+
+
+
+
+// 4. find second min number in an array
+// const arr = [88,55,1,2,3,99]
+
+//first way: using Math
+// const minNum = Math.min(...arr)
+// const removeMin = arr.filter(item => item !== minNum)
+// const secondMin = Math.min(...removeMin)
+// console.log(secondMin)
+
+//second way: using sort
+// const sortedArr = arr.sort((a,r) => a-r)
+// console.log(sortedArr[1])
+
+//third way: uaing loop
+// const secondMin = (items) => {
+//     for(let i=0; i<items.length; i++){
+//         for(j=i+1; j<items.length; j++){
+//             if(items[i] > items[j]){
+//                 const temp = items[i]
+//                 items[i] = items[j]
+//                 items[j] = temp
+//             }
+//         }
+//     }
+//     return items[1]
+// }
+// console.log(secondMin(arr))
+
+
+
+
+
+// 5. reverse a string
+const str = 'Nizam'
+
+//first way: using reverse
+// const reversedStr = str.split('').reverse().join('')
+// console.log(reversedStr)
+
+//second way: using reduce
+const reverseIt = str.split('').reduce((pre, cur) => cur + pre)
+console.log(reverseIt)
+
+//third way: using
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
