@@ -285,10 +285,37 @@ const arr = [2,3,1,5,7,6,4,9,13]
 
 
 
+// 7. factorial of a number
+
+// const fact = (num) => {
+//     let res = 1;
+//     for (let i=1; i<=num; i++){
+//         res *= i
+//     }
+//     return res
+// }
+// console.log(fact(6))
 
 
 
 
+
+
+// 8. prime number
+// const prime = (num) => {
+//     if(num<2){
+//         return false
+//     }
+//     for (i=2; i<=Math.sqrt(num); i++){
+//         console.log('Nizam')
+//         if(num % i === 0){
+//             return false
+//         }
+//     }
+//     return true
+// }
+
+// console.log(prime(65))
 
 
 
