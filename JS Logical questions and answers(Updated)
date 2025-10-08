@@ -229,34 +229,56 @@ const arr = [2,3,1,5,7,6,4,9,13]
 
 
 // 5. reverse a string
-const str = 'Nizam'
+// const str = 'Nizam'
 
 //first way: using reverse
 // const reversedStr = str.split('').reverse().join('')
 // console.log(reversedStr)
 
 //second way: using reduce
-const reverseIt = str.split('').reduce((pre, cur) => cur + pre)
-console.log(reverseIt)
+// const reverseIt = str.split('').reduce((pre, cur) => cur + pre)
+// console.log(reverseIt)
 
-//third way: using
-
-
-
-
-
-
-
-
-
-
+//third way: using loop
+// const reverseStrUsingLoop = (str) => {
+//     let reversedStr = []
+//     for (i=str.length-1; i>=0; i--){
+//         reversedStr.push(str[i])
+//     }
+//     return reversedStr.join('')
+// }
+// console.log(reverseStrUsingLoop(str))
 
 
 
 
 
 
+// 6. find palindrome
+// const str = 'level'
 
+//first way: using reverse
+// const reverseIt = str.split('').reverse().join('')
+// const isPalindrome = reverseIt === str
+// console.log(isPalindrome)
+
+//second way: using reduce
+// const reverseIt = (str) => {
+//     const reversedStr = str.split('').reduce((pre, cur) => cur + pre)
+//     return reversedStr === str
+// }
+// console.log(reverseIt(str))
+
+//third way: using loop
+// const makePali = (str) => {
+//     let reversedStr = [];
+//     for (i=str.length -1; i>=0; i--){
+//         reversedStr.push(str[i])
+//     }
+//     return str === reversedStr.join('')
+// }
+
+// console.log(makePali(str))
 
 
 
