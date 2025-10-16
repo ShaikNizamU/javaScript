@@ -8,7 +8,7 @@
 // 8. prime number
 // 9. fibonacci series
 // 10. compare two arrays
-// 11. compare dates
+// 11. sort dates
 // 12. sort an array 
 // 13. pattern
 // 14. total a number of an array
@@ -231,6 +231,21 @@
 
 
 
+// 9. fibonacci series
+// const fibo = (num) => {
+//     let a=0;
+//     let b=1;
+//     let res = []
+//     for(i=1; i<=num; i++){
+//         res.push(a)
+//         let total = a+b;
+//         a=b;
+//         b=total
+//     }
+//     return res
+// }
+
+// console.log(fibo(13))
 
 
 
@@ -239,10 +254,35 @@
 
 
 
+// 10. compare two arrays
+// const arr1 = [1,2,3,4,5]
+// const arr2 = [1,2,3,4,5]
+
+// const EasyWay = JSON.stringify(...arr1) === JSON.stringify(...arr2)
+// const compare = (items1, items2) => {
+//     if(items1.length !== items2.length){
+//         return false
+//     }
+//     for(i=0; i<=items1.length; i++){
+//         if(items1[i] !== items2[i]){
+//             return false
+//         }
+//     }
+//     return true
+// }
+// console.log(compare(arr1, arr2))
 
 
 
 
+
+
+
+// 11. sort dates
+const dates = ['2025-10-28','2026-10-28','2020-10-28']
+const sortDates = dates.sort((a, b) => new Date(a) - new Date(b))
+
+console.log(sortDates)
 
 
 
