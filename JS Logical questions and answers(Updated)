@@ -13,6 +13,7 @@
 // 13. pattern
 // 14. total a number of an array
 // 15. find a missing numbers in an array
+// 16. remove prime numbers from an array
 
 
 
@@ -279,10 +280,81 @@
 
 
 // 11. sort dates
-const dates = ['2025-10-28','2026-10-28','2020-10-28']
-const sortDates = dates.sort((a, b) => new Date(a) - new Date(b))
+// const dates = ['2025-10-28','2026-10-28','2020-10-28']
+// const sortDates = dates.sort((a, b) => new Date(a) - new Date(b))
 
-console.log(sortDates)
+// console.log(sortDates)
+
+
+
+
+// 12. sort an array 
+// const arr = [2,5,8,1,3,4,6]
+// const sortedArr = arr.sort((a,b) => a-b)
+// console.log(sortedArr)
+
+
+
+
+// 13. pattern
+// function pattern(num){
+//     let temp = ''
+//     for(i=1; i<=num; i++){
+//         temp += i
+//         console.log(temp)
+//     }
+// }
+// pattern(6)
+
+
+
+
+// 13.5 - pattern
+// function pattern(num){
+//   for(i=num; i>=1; i--){
+//       let temp = '';
+//       for(j=1; j<=i; j++){
+//           temp += j
+//       }
+//       console.log(temp)
+//   }
+// }
+// pattern(6)
+
+
+
+
+
+
+
+
+
+// 14. total a number of an array
+const arr =[1,2,3,4,6,7]
+// const arrTotal = arr.reduce((pre,cur) => pre+cur, 0)
+// console.log(arrTotal)
+
+//using loop
+// let store = 0;
+// for(i=0; i<arr.length; i++){
+//     store += arr[i]
+// }
+// console.log(store)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
