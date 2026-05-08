@@ -343,7 +343,20 @@ const arr =[1,2,3,4,6,7]
 
 
 
+// 15. find missing numbers
+const arr = [5,1,2,6]
 
+const max = Math.max(...arr)
+
+let missingNums = []
+
+for(i=1; i<=max; i++){
+    if(!arr.includes(i)){
+        missingNums.push(i)
+    }
+}
+
+console.log(missingNums)
 
 
 
