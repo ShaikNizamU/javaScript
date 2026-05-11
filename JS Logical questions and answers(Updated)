@@ -14,6 +14,7 @@
 // 14. total a number of an array
 // 15. find a missing numbers in an array
 // 16. remove prime numbers from an array
+// 17. Flatten Array
 
 
 
@@ -359,7 +360,104 @@ for(i=1; i<=max; i++){
 console.log(missingNums)
 
 
+// 17.1 Flatten Array Using flat()
 
+// const arr = [1,2,[3,4],[5,6]]
+
+// const flattenedArr = arr.flat()
+
+// console.log(flattenedArr)
+
+// Output:
+// [1,2,3,4,5,6]
+
+
+
+
+// 17.2 Flatten Array Manually (Single Level)
+
+// const arr = [1,2,[3,4],[5,6]]
+
+// let store = []
+
+// for(let item of arr){
+
+//     if(Array.isArray(item)){
+//         store.push(...item)
+//     }else{
+//         store.push(item)
+//     }
+// }
+
+// console.log(store)
+
+// Output:
+// [1,2,3,4,5,6]
+
+
+
+
+
+
+// 17.3 Flatten Deep Nested Array Using flat(Infinity)
+
+// const arr = [1,2,[3,4,[55,2,[1,2,3]]],[5,6]]
+
+// const flattenedArr = arr.flat(Infinity)
+
+// console.log(flattenedArr)
+
+// Output:
+// [1,2,3,4,55,2,1,2,3,5,6]
+
+
+
+
+// 17.4 Flatten Deep Nested Array Using Recursion
+
+// const arr = [1,2,[3,4,[55,2,[1,2,3]]],[5,6]]
+
+// let store = []
+
+// function flattenArray(data){
+
+//     for(let item of data){
+
+//         if(Array.isArray(item)){
+//             flattenArray(item)
+//         }else{
+//             store.push(item)
+//         }
+//     }
+// }
+
+// flattenArray(arr)
+
+// console.log(store)
+
+// Output:
+// [1,2,3,4,55,2,1,2,3,5,6]
+
+
+
+
+
+
+// Important Interview Points
+
+// flat()
+// - Built-in JavaScript method
+// - flat() => single level flatten
+// - flat(Infinity) => deep nested flatten
+
+// Manual Flattening
+// - Good for interview logic
+// - Shows array understanding
+
+// Recursion
+// - Function calling itself
+// - Best approach for deep nested arrays
+// - Common interview question
 
 
 
