@@ -493,6 +493,31 @@ search('hel')
 search('hell')
 search('hello')
 
+// 19. Debouncing 
+
+const debounce = (fn, delay) => {
+    let timer;
+    return function(val){
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            fn(val)
+        },delay)
+    }
+    
+}
+
+function search(val){
+    console.log(val, 'Nizam')
+}
+
+const debounceSearch = debounce(search,1000)
+
+debounceSearch('h')
+debounceSearch('he')
+debounceSearch('hel')
+debounceSearch('hell')
+debounceSearch('hello')
+
 
 
 
