@@ -16,6 +16,7 @@
 // 16. remove prime numbers from an array
 // 17. Flatten Array
 // 18. Anagram
+// 19. Debouncing
 
 
 
@@ -474,6 +475,23 @@ const Anagram = (str1, str2) => {
 
 console.log(Anagram('lisgten', 'silent'))
 
+
+
+// 19. Debouncing
+
+let timer;
+const search = (val) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+        console.log(val, 'Nizam')
+    },1000)
+}
+
+search('h')
+search('he')
+search('hel')
+search('hell')
+search('hello')
 
 
 
