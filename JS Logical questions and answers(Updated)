@@ -15,6 +15,7 @@
 // 15. find a missing numbers in an array
 // 16. remove prime numbers from an array
 // 17. Flatten Array
+// 18. Anagram
 
 
 
@@ -460,7 +461,18 @@ console.log(missingNums)
 // - Common interview question
 
 
+// 18. Anagram
+const Anagram = (str1, str2) => {
+    const str1Dum = str1.toLowerCase().split('').sort().join('')
+    const str2Dum = str2.toLowerCase().split('').sort().join('')
+    if(str1Dum === str2Dum){
+        return true
+    }else{
+        return false
+    }
+}
 
+console.log(Anagram('lisgten', 'silent'))
 
 
 
