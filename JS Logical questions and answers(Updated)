@@ -17,6 +17,7 @@
 // 17. Flatten Array
 // 18. Anagram
 // 19. Debouncing
+// 20. Closure
 
 
 
@@ -517,6 +518,23 @@ debounceSearch('he')
 debounceSearch('hel')
 debounceSearch('hell')
 debounceSearch('hello')
+
+
+// 20. Closuree
+
+function outer() {
+ let count = 0;
+
+ return function() {
+   count++;
+   console.log(count);
+ };
+}
+
+const increment = outer();
+
+increment();
+increment();
 
 
 
