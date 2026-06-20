@@ -66,6 +66,10 @@ Explanation:
 - Synchronous code runs first.
 - Promise callbacks (Microtask Queue) execute before setTimeout (Macrotask Queue).
 
+  Interview Answer
+
+JavaScript is single-threaded and uses an Event Loop to handle asynchronous operations. Synchronous code executes first in the Call Stack. Promise callbacks are placed in the Microtask Queue, while setTimeout callbacks are placed in the Macrotask Queue. After the Call Stack becomes empty, the Event Loop executes all Microtasks first and then processes Macrotasks. Therefore, Promise callbacks execute before setTimeout, even if the timeout is 0 milliseconds.
+
 --------------------------------------------------------
 4. Nested setTimeout
 --------------------------------------------------------
