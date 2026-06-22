@@ -1,0 +1,445 @@
+// 1. var with setTimeout
+function q1() {
+  for (var i = 1; i <= 3; i++) {
+    setTimeout(() => {
+      console.log(i);
+    }, 1000);
+  }
+}
+
+// --------------------------------------------------------
+
+// 2. let with setTimeout
+function q2() {
+  for (let i = 1; i <= 3; i++) {
+    setTimeout(() => {
+      console.log(i);
+    }, 1000);
+  }
+}
+
+// --------------------------------------------------------
+
+// 3. Promise vs setTimeout
+function q3() {
+  console.log("Start");
+
+  setTimeout(() => {
+    console.log("Timeout");
+  }, 0);
+
+  Promise.resolve().then(() => {
+    console.log("Promise");
+  });
+
+  console.log("End");
+}
+
+// --------------------------------------------------------
+
+// 4. Nested setTimeout
+function q4() {
+  console.log("A");
+
+  setTimeout(() => {
+    console.log("B");
+
+    setTimeout(() => {
+      console.log("C");
+    }, 0);
+
+  }, 0);
+
+  console.log("D");
+}
+
+// --------------------------------------------------------
+
+// 5. Array Reference
+function q5() {
+  let a = [1, 2, 3];
+  let b = a;
+
+  b.push(4);
+
+  console.log(a);
+  console.log(b);
+}
+
+// --------------------------------------------------------
+
+// 6. typeof null
+function q6() {
+  console.log(typeof null);
+}
+
+// --------------------------------------------------------
+
+// 7. == vs ===
+function q7() {
+  console.log(1 == "1");
+  console.log(1 === "1");
+}
+
+// --------------------------------------------------------
+
+// 8. var Hoisting
+function q8() {
+  console.log(a);
+
+  var a = 10;
+}
+
+// --------------------------------------------------------
+
+// 9. let Hoisting
+function q9() {
+  console.log(a);
+
+  let a = 10;
+}
+
+// --------------------------------------------------------
+
+// 10. Object Reference
+function q10() {
+  let obj1 = {
+    name: "John"
+  };
+
+  let obj2 = obj1;
+
+  obj2.name = "Peter";
+
+  console.log(obj1.name);
+}
+
+// --------------------------------------------------------
+
+// 11. Primitive Values
+function q11() {
+  let a = 10;
+  let b = a;
+
+  b = 20;
+
+  console.log(a);
+  console.log(b);
+}
+
+// --------------------------------------------------------
+
+// 12. typeof NaN
+function q12() {
+  console.log(typeof NaN);
+}
+
+// --------------------------------------------------------
+
+// 13. null vs undefined
+function q13() {
+  console.log(null == undefined);
+  console.log(null === undefined);
+}
+
+// --------------------------------------------------------
+
+// 14. Closure
+function q14() {
+  function outer() {
+    let count = 0;
+
+    return function () {
+      count++;
+      console.log(count);
+    };
+  }
+
+  const increment = outer();
+
+  increment();
+  increment();
+  increment();
+}
+
+// --------------------------------------------------------
+
+// 15. map()
+function q15() {
+  const arr = [1, 2, 3];
+
+  const result = arr.map(x => x * 2);
+
+  console.log(result);
+}
+
+// --------------------------------------------------------
+
+// 16. filter()
+function q16() {
+  const arr = [1, 2, 3, 4];
+
+  const result = arr.filter(x => x % 2 === 0);
+
+  console.log(result);
+}
+
+// --------------------------------------------------------
+
+// 17. reduce()
+function q17() {
+  const arr = [1, 2, 3, 4];
+
+  const sum = arr.reduce((acc, curr) => acc + curr, 0);
+
+  console.log(sum);
+}
+
+// --------------------------------------------------------
+
+// 18. Async Function
+function q18() {
+  async function test() {
+    return 10;
+  }
+
+  test().then(console.log);
+}
+
+// --------------------------------------------------------
+
+// 19. [] == false
+function q19() {
+  console.log([] == false);
+}
+
+// --------------------------------------------------------
+
+// 20. Event Loop Order
+function q20() {
+  console.log(1);
+
+  setTimeout(() => {
+    console.log(2);
+  }, 0);
+
+  Promise.resolve().then(() => {
+    console.log(3);
+  });
+
+  console.log(4);
+}
+
+// 21. What will be the output?
+
+function q21() {
+  console.log([] + []);
+  console.log([] + {});
+  console.log({} + []);
+}
+
+// --------------------------------------------------------
+
+// 22. What will be the output?
+
+function q22() {
+  console.log(true + true);
+  console.log(true + false);
+  console.log(false + false);
+}
+
+// --------------------------------------------------------
+
+// 23. What will be the output?
+
+function q23() {
+  console.log("5" - 2);
+  console.log("5" + 2);
+}
+
+// --------------------------------------------------------
+
+// 24. What will be the output?
+
+function q24() {
+  console.log(0 == false);
+  console.log("" == false);
+  console.log(null == false);
+}
+
+// --------------------------------------------------------
+
+// 25. What will be the output?
+
+function q25() {
+  console.log(+"10");
+  console.log(+"abc");
+}
+
+// --------------------------------------------------------
+
+// 26. What will be the output?
+
+function q26() {
+  console.log(1 < 2 < 3);
+  console.log(3 > 2 > 1);
+}
+
+// --------------------------------------------------------
+
+// 27. What will be the output?
+
+function q27() {
+  let x = 10;
+
+  function test() {
+    console.log(x);
+
+    let x = 20;
+  }
+
+  test();
+}
+
+// --------------------------------------------------------
+
+// 28. What will be the output?
+
+function q28() {
+  const obj = {
+    a: 1,
+    b: 2
+  };
+
+  const copy = obj;
+
+  copy.a = 100;
+
+  console.log(obj.a);
+}
+
+// --------------------------------------------------------
+
+// 29. What will be the output?
+
+function q29() {
+  console.log(typeof []);
+  console.log(Array.isArray([]));
+}
+
+// --------------------------------------------------------
+
+// 30. What will be the output?
+
+function q30() {
+  console.log(NaN == NaN);
+  console.log(NaN === NaN);
+}
+
+// --------------------------------------------------------
+
+// 31. What will be the output?
+
+function q31() {
+  console.log([] === []);
+}
+
+// --------------------------------------------------------
+
+// 32. What will be the output?
+
+function q32() {
+  console.log([1, 2] == "1,2");
+}
+
+// --------------------------------------------------------
+
+// 33. What will be the output?
+
+function q33() {
+  console.log(Boolean(" "));
+  console.log(Boolean(""));
+}
+
+// --------------------------------------------------------
+
+// 34. What will be the output?
+
+function q34() {
+  console.log(10 + "20");
+  console.log("10" - 5);
+}
+
+// --------------------------------------------------------
+
+// 35. What will be the output?
+
+function q35() {
+  console.log(typeof undefined);
+  console.log(typeof function () {});
+}
+
+// --------------------------------------------------------
+
+// 36. What will be the output?
+
+function q36() {
+  let a = [1, 2];
+  let b = [...a];
+
+  b.push(3);
+
+  console.log(a);
+  console.log(b);
+}
+
+// --------------------------------------------------------
+
+// 37. What will be the output?
+
+function q37() {
+  const obj = {
+    name: "John"
+  };
+
+  const copy = { ...obj };
+
+  copy.name = "Peter";
+
+  console.log(obj.name);
+  console.log(copy.name);
+}
+
+// --------------------------------------------------------
+
+// 38. What will be the output?
+
+function q38() {
+  function test(a, b = 5) {
+    return a + b;
+  }
+
+  console.log(test(10));
+}
+
+// --------------------------------------------------------
+
+// 39. What will be the output?
+
+function q39() {
+  console.log(2 + true);
+  console.log(2 + null);
+  console.log(2 + undefined);
+}
+
+// --------------------------------------------------------
+
+// 40. What will be the output?
+
+function q40() {
+  const arr = [1, 2, 3];
+
+  arr.length = 1;
+
+  console.log(arr);
+}
