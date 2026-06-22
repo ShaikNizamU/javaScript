@@ -18,6 +18,7 @@
 // 18. Anagram
 // 19. Debouncing
 // 20. Closure
+// 21. Frequency
 
 
 
@@ -537,6 +538,24 @@ increment();
 increment();
 
 
+
+//21. Frequency
+
+// const  arr = [1,2,2,3,3,3,4,4,4,4,5,5,5,5,5]
+
+// const frequency = {}
+
+// for(let item of arr){
+//     frequency[item] = (frequency[item] || 0) +1;
+// }
+
+// console.log(frequency)
+
+// for (var i = 1; i <= 3; i++) { 
+//     setTimeout(() =>{ 
+//         console.log(i); 
+//     }, 1000); 
+// }
 
 
 
