@@ -1,3 +1,4 @@
+console.log("Bismillah")
 // 1. find max number in an array
 // 2. find second max number in an array
 // 3. find min number in an array
